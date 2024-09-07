@@ -1,0 +1,25 @@
+---
+title: ""
+format:
+  html:
+    minimal: true
+    css: styles.css
+    toc: true
+    toc-title: " "
+    code-copy: false
+---
+
+
+# Science
+
+```{r}
+library(scholar)
+id <- "MFlgHdcAAAAJ"
+l <- get_profile(id)
+d <- get_publications(id)
+d[1:10, ]
+```
+
+# Dev
+
+# Open
