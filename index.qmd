@@ -4,22 +4,61 @@ format:
   html:
     minimal: true
     css: styles.css
-    toc: true
+    toc: false
     toc-title: " "
     code-copy: false
+execute: 
+  echo: false
+  warning: false
 ---
 
+```{=html}
+<nav class="nav">
+  <div class="nav-left">
+    <a href="/">home</a>
+    <a href="#dev">blog</a>
+  </div>
+  <div class="nav-center">
+    <a class="brand">
+      <img src="logo.svg" alt="">
+    </a>
+  </div>
+  <div class="nav-right">
+      <a href="#sci">Sci</a>
+      <a href="#dev">Dev</a>
+      <a href="#dat">Dat</a>
+  </div>
+</nav>
 
-# Science
+```
+
+# Sci
 
 ```{r}
+#| label: scholar-data
+#| cache: true
 library(scholar)
 id <- "MFlgHdcAAAAJ"
 l <- get_profile(id)
 d <- get_publications(id)
-d[1:10, ]
+```
+```{r}
+#| label: scholar-table
+#| message: false
+library(dplyr)
+d <- arrange(d,desc(year))
+knitr::kable(d[1:10, c(1,2,3)])
 ```
 
 # Dev
+<!-- https://schochastics.r-universe.dev/packages -->
+```{r}
+#| output: asis
+fl <- list.files("hex", full.names = TRUE)
+for (f in fl) {
+    cat("![](",f, ")\n")
+}
 
-# Open
+```
+
+# Dat

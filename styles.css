@@ -1,1 +1,10 @@
+@import url(chota/chota.min.css);
+
+:root {
+    --color-primary: #da1d50;
+    --grid-maxWidth: 108rem;
+    --bg-color: #333333;
+    --font-color: #ffffff;
+}
+
 /* css styles */
