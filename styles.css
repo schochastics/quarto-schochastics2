@@ -18,3 +18,11 @@
 .nav a {
     color: var(--color-primary);
 }
+
+.avatar {
+    border-radius: 50%;
+}
+
+.me {
+    text-align: center;
+}

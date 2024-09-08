@@ -38,6 +38,12 @@ library(scholar)
 library(dplyr)
 ```
 
+:::{.me}
+![](avatar.jpg){.avatar}
+
+Hi I am David Schoch
+:::
+
 # /Sci/
 
 ```{r}
