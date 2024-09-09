@@ -1,5 +1,5 @@
 ```{=html}
-<nav class="nav">
+<nav class="nav" id="navbar">
   <div class="nav-left">
     <a href="/">/home/</a>
     <a href="https://blog.schochastics.net">/blog/</a>
@@ -27,7 +27,7 @@ library(rvest)
 
 ```{r}
 #| label: get-data
-#| cache: false
+#| cache: true
 pkgs <- jsonlite::fromJSON("https://schochastics.r-universe.dev/api/packages/")
 
 id <- "MFlgHdcAAAAJ"

@@ -20,6 +20,13 @@
     color: var(--color-primary);
 }
 
+#navbar {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: var(--bg-color);
+}
+
 .avatar {
     border-radius: 50%;
 }
