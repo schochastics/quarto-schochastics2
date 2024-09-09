@@ -1,17 +1,3 @@
----
-page-title: "David Schoch - schochastics"
-format:
-  html:
-    minimal: true
-    css: styles.css
-    toc: false
-    toc-title: " "
-    code-copy: false
-execute: 
-  echo: false
-  warning: false
----
-
 ```{=html}
 <nav class="nav">
   <div class="nav-left">
@@ -54,11 +40,13 @@ most <- d[1:3, ]
 most$url <- sapply(most$pubid, \(x) get_publication_url(id, x))
 ```
 
-:::{.row}
-:::{.col-1}
+::::{.row}
+
+:::{.col-2}
+
 :::
 
-:::{.col-10}
+:::{.col-8}
 
 :::{.me}
 ![](avatar.jpg){.avatar}
@@ -70,7 +58,10 @@ I am the team lead for "Transparent Social Analytics" in the Department for Comp
 [![](img/mastodon.svg){.social}](https://fosstodon.org/@schochastics)
 [![](img/twitter.svg){.social}](https://x.com/schochastics)
 [![](img/scholar.svg){.social}](https://scholar.google.de/citations?user=MFlgHdcAAAAJ)
+
 :::
+
+
 
 # /sci/
 
@@ -102,6 +93,8 @@ for (i in seq_len(nrow(most))) {
 
 
 See [google scholar](https://scholar.google.de/citations?user=MFlgHdcAAAAJ) for a full list.
+
+
 
 # /dev/
 
@@ -146,6 +139,8 @@ I have created a series of tutorials for network analysis:
 
 I am also an author of the book [R4SNA](https://schochastics.github.io/R4SNA/)
 
+
+
 # /etc/
 
 I have various (more or less) interesting side projects:
@@ -156,8 +151,12 @@ I have various (more or less) interesting side projects:
 - [Rendering Galaxies in R](https://github.com/schochastics/galaxies)
 - A [collection of football datasets](https://github.com/schochastics/football-data)
 
+
+
 :::
 
-:::{.col-1}
+:::{.col-2}
+
 :::
-:::
+
+::::

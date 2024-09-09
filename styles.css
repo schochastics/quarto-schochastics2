@@ -44,3 +44,13 @@ h3 {
     color: var(--color-primary);
     font-weight: 700;
 }
+
+h1::before {
+    content: ' ';
+    display: block;
+    border: 1px solid white;
+}
+
+h1 {
+    padding-top: 0.5em;
+}
