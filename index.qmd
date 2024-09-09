@@ -1,5 +1,5 @@
 ---
-title: ""
+page-title: "David Schoch - schochastics"
 format:
   html:
     minimal: true
@@ -57,7 +57,7 @@ most$url <- sapply(most$pubid, \(x) get_publication_url(id, x))
 :::{.me}
 ![](avatar.jpg){.avatar}
 
-Hi I am [David Schoch]{.highlight}  
+👋 Hi I am [David Schoch]{.highlight}  
 I am the team lead for "Transparent Social Analytics" in the Department for Computational Social Science at [GESIS](https://www.gesis.org/home).
 
 [![](img/github.svg){.social}](https://github.com/schochastics)
