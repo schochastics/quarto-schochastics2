@@ -36,12 +36,29 @@ execute:
 #| label: load-libs
 library(scholar)
 library(dplyr)
+library(rvest)
+```
+
+```{r}
+#| label: get-data
+#| cache: true
+pkgs <- jsonlite::fromJSON("https://schochastics.r-universe.dev/api/packages/")
+
+id <- "MFlgHdcAAAAJ"
+l <- get_profile(id)
+d <- get_publications(id)
+last <- arrange(d, desc(year))
+last <- last[1:5, ]
+last$url <- sapply(last$pubid, \(x) get_publication_url(id, x))
+most <- d[1:3, ]
+most$url <- sapply(most$pubid, \(x) get_publication_url(id, x))
 ```
 
 :::{.me}
 ![](avatar.jpg){.avatar}
 
-Hi I am David Schoch
+Hi I am [David Schoch]{.highlight}  
+I am the team lead for "Transparent Social Analytics" in the Department for Computational Social Science at [GESIS](https://www.gesis.org/home).
 
 [![](img/github.svg){.social}](https://github.com/schochastics)
 [![](img/mastodon.svg){.social}](https://fosstodon.org/@schochastics)
@@ -51,21 +68,8 @@ Hi I am David Schoch
 
 # /sci/
 
-```{r}
-#| label: scholar-data
-#| cache: true
-id <- "MFlgHdcAAAAJ"
-l <- get_profile(id)
-d <- get_publications(id)
-last <- arrange(d, desc(year))
-last <- last[1:5, ]
-last$url <- sapply(last$pubid, \(x) get_publication_url(id, x))
-most <- d[1:3, ]
-most$url <- sapply(most$pubid, \(x) get_publication_url(id, x))
-
-```
-
-I publish in the fields `r paste0(l$fields,collapse="; ")`
+I publish in the fields:  
+`r paste0(l$fields,collapse="; ")`
 
 My last five publications:
 ```{r}
@@ -95,16 +99,46 @@ See [google scholar](https://scholar.google.de/citations?user=MFlgHdcAAAAJ) for 
 
 # /dev/
 
-I mainly develop packages for [R](https://www.r-project.org/) and extensions for [Quarto](https://quarto.org)
+I mainly develop packages for [R](https://www.r-project.org/) and extensions for [Quarto](https://quarto.org).
 
-<!-- https://schochastics.r-universe.dev/packages -->
+**R packages**  
 ```{r}
+#| label: r-packages
 #| output: asis
-fl <- list.files("hex", full.names = TRUE)
-for (f in fl) {
-    cat("![](", f, ")\n")
+ido <- order(pkgs$Package)
+fl <- list.files("img/hex", full.names = TRUE)
+for (i in seq_along(fl)) {
+    cat("![](", fl[i], ")[", pkgs$Package[ido[i]], "](", pkgs$RemoteUrl[i], ")", "\n", sep = "")
 }
 
 ```
 
+**Quarto extensions**  
+
+```{r}
+#| label: quarto
+#| output: asis
+doc <- read_html("https://raw.githubusercontent.com/schochastics/schochastics/main/README.md")
+descr <- html_table(doc)[[1]]$X1[-1]
+links <- html_nodes(doc, xpath = "//td/a") %>%
+    html_attr("href")
+
+for (i in seq_along(descr)) {
+    cat("[", descr[i], "](", links[i], ") &#9679; ", sep = "")
+}
+```
+
+**Tutorials**
+
+I have created a series of tutorials for network analysis
+
+- 
+- 
+- 
+
+I am also an author of the book [R4SNA](https://schochastics.github.io/R4SNA/)
+
+see my [GitHub](https://github.com/schochastics) and [r-universe](https://schochastics.r-universe.dev) profiles for more details.
+
 # /tmp/
+

@@ -33,6 +33,11 @@
     border-radius: 50%;
 }
 
+.highlight {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
 h1,
 h2,
 h3 {
