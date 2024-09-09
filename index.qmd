@@ -132,9 +132,9 @@ for (i in seq_along(descr)) {
 
 I have created a series of tutorials for network analysis
 
-- 
-- 
-- 
+- [Network Visualization in R](https://schochastics.github.io/netVizR/)
+- [Basic Network Analysis in R](https://schochastics.github.io/netAnaR/)
+- [Tidy Network Analysis in R](https://schochastics.github.io/tidynetAnaR/)
 
 I am also an author of the book [R4SNA](https://schochastics.github.io/R4SNA/)
 
