@@ -26,7 +26,7 @@ execute:
   <div class="nav-right">
       <a href="#sci">/sci/</a>
       <a href="#dev">/dev/</a>
-      <a href="#dat">/tmp/</a>
+      <a href="#etc">/etc/</a>
   </div>
 </nav>
 
@@ -128,9 +128,11 @@ for (i in seq_along(descr)) {
 }
 ```
 
+see my [GitHub](https://github.com/schochastics) and [r-universe](https://schochastics.r-universe.dev) profiles for more details.
+
 **Tutorials**
 
-I have created a series of tutorials for network analysis
+I have created a series of tutorials for network analysis:
 
 - [Network Visualization in R](https://schochastics.github.io/netVizR/)
 - [Basic Network Analysis in R](https://schochastics.github.io/netAnaR/)
@@ -138,7 +140,12 @@ I have created a series of tutorials for network analysis
 
 I am also an author of the book [R4SNA](https://schochastics.github.io/R4SNA/)
 
-see my [GitHub](https://github.com/schochastics) and [r-universe](https://schochastics.r-universe.dev) profiles for more details.
+# /etc/
 
-# /tmp/
+I have various (more or less) interesting side projects:
 
+- A [football analytics website](http://worldclubratings.com/)
+- [30DayMapChallenge contributions](https://github.com/schochastics/30DayMapChallenge)
+- [Minard’s Statistical Graphics with Modern Data in R](https://github.com/schochastics/minard)
+- [Rendering Galaxies in R](https://github.com/schochastics/galaxies)
+- A [collection of football datasets](https://github.com/schochastics/football-data)
