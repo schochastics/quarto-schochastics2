@@ -12,6 +12,7 @@
     --bg-color: #333333;
     --font-color: #ffffff;
     --font-family-sans: "Radon", sans-serif;
+    --font-size: 2.0rem;
 }
 
 /* css styles */
@@ -25,4 +26,16 @@
 
 .me {
     text-align: center;
+}
+
+.social {
+    width: 25px;
+    border-radius: 50%;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-primary);
+    font-weight: 700;
 }

@@ -20,7 +20,7 @@ execute:
   </div>
   <div class="nav-center">
     <a class="brand">
-      <img src="logo.svg" alt="">
+      <img src="img/logo.svg" alt="">
     </a>
   </div>
   <div class="nav-right">
@@ -42,9 +42,14 @@ library(dplyr)
 ![](avatar.jpg){.avatar}
 
 Hi I am David Schoch
+
+[![](img/github.svg){.social}](https://github.com/schochastics)
+[![](img/mastodon.svg){.social}](https://fosstodon.org/@schochastics)
+[![](img/twitter.svg){.social}](https://x.com/schochastics)
+[![](img/scholar.svg){.social}](https://scholar.google.de/citations?user=MFlgHdcAAAAJ)
 :::
 
-# /Sci/
+# /sci/
 
 ```{r}
 #| label: scholar-data
@@ -88,7 +93,10 @@ for (i in seq_len(nrow(most))) {
 
 See [google scholar](https://scholar.google.de/citations?user=MFlgHdcAAAAJ) for a full list.
 
-# /Dev/
+# /dev/
+
+I mainly develop packages for [R](https://www.r-project.org/) and extensions for [Quarto](https://quarto.org)
+
 <!-- https://schochastics.r-universe.dev/packages -->
 ```{r}
 #| output: asis
@@ -99,4 +107,4 @@ for (f in fl) {
 
 ```
 
-# /Dat/
+# /tmp/
