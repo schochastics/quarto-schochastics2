@@ -54,6 +54,12 @@ most <- d[1:3, ]
 most$url <- sapply(most$pubid, \(x) get_publication_url(id, x))
 ```
 
+:::{.row}
+:::{.col-1}
+:::
+
+:::{.col-10}
+
 :::{.me}
 ![](avatar.jpg){.avatar}
 
@@ -149,3 +155,9 @@ I have various (more or less) interesting side projects:
 - [Minard’s Statistical Graphics with Modern Data in R](https://github.com/schochastics/minard)
 - [Rendering Galaxies in R](https://github.com/schochastics/galaxies)
 - A [collection of football datasets](https://github.com/schochastics/football-data)
+
+:::
+
+:::{.col-1}
+:::
+:::
