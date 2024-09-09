@@ -1,0 +1,11 @@
+page-title: "David Schoch - schochastics"
+format:
+  html:
+    minimal: true
+    css: styles.css
+    toc: false
+    toc-title: " "
+    code-copy: false
+execute: 
+  echo: false
+  warning: false
