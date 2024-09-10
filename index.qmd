@@ -54,6 +54,7 @@ most$url <- sapply(most$pubid, \(x) get_publication_url(id, x))
 👋 Hi I am [David Schoch]{.highlight}  
 I am the team lead for "Transparent Social Analytics" in the Department for Computational Social Science at [GESIS](https://www.gesis.org/home).
 
+<!-- https://github.com/edent/SuperTinyIcons?tab=readme-ov-file -->
 [![](img/github.svg){.social}](https://github.com/schochastics)
 [![](img/mastodon.svg){.social}](https://fosstodon.org/@schochastics)
 [![](img/twitter.svg){.social}](https://x.com/schochastics)
