@@ -1,4 +1,10 @@
-page-title: "David Schoch - schochastics"
+project:
+  type: website
+
+website:
+  site-url: "https://mr.schochastics.net"
+  title: "David Schoch - schochastics"
+  favicon: "favicon.ico"
 format:
   html:
     minimal: true
