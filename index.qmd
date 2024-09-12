@@ -108,7 +108,7 @@ I mainly develop packages for [R](https://www.r-project.org/) and extensions for
 ido <- order(pkgs$Package)
 fl <- list.files("img/hex", full.names = TRUE)
 for (i in seq_along(fl)) {
-    cat("![](", fl[i], ")[", pkgs$Package[ido[i]], "](", pkgs$RemoteUrl[i], ")", "\n", sep = "")
+    cat("![](", fl[i], ")[", pkgs$Package[ido[i]], "](", pkgs$RemoteUrl[ido[i]], ")", "\n", sep = "")
 }
 
 ```
