@@ -147,6 +147,7 @@ I am also an author of the book [R4SNA](https://schochastics.github.io/R4SNA/)
 I have various (more or less) interesting side projects:
 
 - A [football analytics website](http://worldclubratings.com/)
+- The [CRAN Doomsday Clock](https://schochastics.github.io/cran-doomsday/)
 - [30DayMapChallenge contributions](https://github.com/schochastics/30DayMapChallenge)
 - [Minard’s Statistical Graphics with Modern Data in R](https://github.com/schochastics/minard)
 - [Rendering Galaxies in R](https://github.com/schochastics/galaxies)
