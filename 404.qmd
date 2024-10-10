@@ -1,0 +1,19 @@
+---
+title: "Page not found"
+---
+
+
+::::{.row}
+:::{.col-2}
+:::
+
+:::{.col-8}
+I redesigned my website in September 2024. Some content has moved. Please check the homepage for the new link.
+
+![](img/logo.svg)
+:::
+
+:::{.col-2}
+
+:::
+::::
