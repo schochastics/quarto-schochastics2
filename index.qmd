@@ -29,6 +29,13 @@ library(rvest)
 #| label: get-data
 #| cache: false
 pkgs <- jsonlite::fromJSON("https://schochastics.r-universe.dev/api/packages/")
+pkgs <- select(pkgs, Package, RemoteUrl)
+if (!"adaR" %in% pkgs$Package) {
+    pkgs <- bind_rows(pkgs, tibble(
+        Package = c("adaR", "rtoot"),
+        RemoteUrl = paste0("https://github.com/gesistsa/", Package)
+    ))
+}
 
 id <- "MFlgHdcAAAAJ"
 l <- get_profile(id)
