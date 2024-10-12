@@ -107,7 +107,7 @@ See [google scholar](https://scholar.google.de/citations?user=MFlgHdcAAAAJ) for 
 
 I mainly develop packages for [R](https://www.r-project.org/) and extensions for [Quarto](https://quarto.org).
 
-**R packages**  
+[**R packages**]{.sec-head}  
 ```{r}
 #| label: r-packages
 #| output: asis
@@ -120,7 +120,7 @@ for (i in seq_along(fl)) {
 
 ```
 
-**Quarto extensions**  
+[**Quarto extensions**]{.sec-head}  
 
 ```{r}
 #| label: quarto
@@ -137,7 +137,7 @@ for (i in seq_along(descr)) {
 
 see my [GitHub](https://github.com/schochastics) and [r-universe](https://schochastics.r-universe.dev) profiles for more details.
 
-**Tutorials**
+[**Tutorials**]{.sec-head}
 
 I have created a series of tutorials for network analysis:
 
