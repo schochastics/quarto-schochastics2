@@ -1,16 +1,57 @@
 ---
-title: "Page not found"
+title: "404"
 ---
 
+```{=html}
+<style>
+    pre,code{
+        background-color: var(--bg-color);
+        color: var(--color-primary);
+    }
+</style>
+```
 
 ::::{.row}
 :::{.col-2}
 :::
 
 :::{.col-8}
-I redesigned my website in September 2024. Some content has moved. Please check the homepage for the new link.
+I redesigned my website in September 2024. Some content has moved.  
 
-![](img/logo.svg)
+Please check the [main side](https://mr.schochastics.net) for the new link.
+```
+    '
+''---.  .-.   .--,;._
+  '   `-\  \-' ./|\\ `'-.
+  .-----,| |--'/ | \\    \
+ /     | | |  /  |  \\   /
+       | | | /   |   \`'`
+       ) | | |  /\   /                   ,,
+      / ;| | `-'  `'`                     \`-.
+     / / | |                   ,'          |   \
+ \_.' /  ; |            .-'-.,','           |  '.
+ ,_.' ,-'  ;               ) )/|            |   |
+    ,'      \         __ ,''  ''`.         _|   |--,.
+   /         `.     ,',./ .-.-.   \.--.  / _) _,'--. )
+  |       ---..`.._| |   /__|__\   ,-. \ |`/ ( `--. _)
+  \            `.  '\_;  ((o|o))    ,' | \<_, `'-, )
+   `.            \   ,-''.--'--.''-. _,'  \    __. '.
+     `.          |  /    \     /    \     /  ,'   `._)
+       \        ,' | .'   `-.-'   '. |   /  /
+       /      _,   | |      |      | |../  ,'
+     .'  /'--'._,,_ \ \     |     / .'    /
+    (_._ '''-._    `.\ `.   |   ,' ,' ___/
+        `-.    \      '. `'-'-'` ,'-'`
+           \ `. \      |`'-...-'`
+           | ; \ |    /  /
+           | | | /  ,' .'     ____
+          (_/.'-'  (   `.   ,'    `'._
+                     `.  `-'     --.. )
+                       `.       .--. `\
+                         `.__.-\ \  `\_)
+                               ( /mx
+                                `
+```
 :::
 
 :::{.col-2}
