@@ -10,8 +10,8 @@
     </a>
   </div>
   <div class="nav-right">
-      <a href="#sci">/sci/</a>
       <a href="#dev">/dev/</a>
+      <a href="#sci">/sci/</a>
       <a href="#etc">/etc/</a>
   </div>
 </nav>
@@ -31,10 +31,10 @@ library(rvest)
 pkgs <- jsonlite::fromJSON("https://schochastics.r-universe.dev/api/packages/")
 pkgs <- select(pkgs, Package, RemoteUrl)
 if (!"adaR" %in% pkgs$Package) {
-    pkgs <- bind_rows(pkgs, tibble(
-        Package = c("adaR", "rtoot"),
-        RemoteUrl = paste0("https://github.com/gesistsa/", Package)
-    ))
+  pkgs <- bind_rows(pkgs, tibble(
+    Package = c("adaR", "rtoot"),
+    RemoteUrl = paste0("https://github.com/gesistsa/", Package)
+  ))
 }
 
 id <- "MFlgHdcAAAAJ"
@@ -64,43 +64,10 @@ I am the team lead for "Transparent Social Analytics" in the Department for Comp
 <!-- https://github.com/edent/SuperTinyIcons?tab=readme-ov-file -->
 [![](img/github.svg){.social}](https://github.com/schochastics)
 [![](img/mastodon.svg){.social}](https://fosstodon.org/@schochastics)
-[![](img/twitter.svg){.social}](https://x.com/schochastics)
+[![](img/bluesky.svg){.social}](https://bsky.app/profile/schochastics.net)
 [![](img/scholar.svg){.social}](https://scholar.google.de/citations?user=MFlgHdcAAAAJ)
 [![](img/orcid.svg){.social}](https://orcid.org/0000-0003-2952-4812)
 :::
-
-
-# /sci/
-
-I publish in the fields:  
-`r paste0(l$fields,collapse="; ")`
-
-My last five publications:
-```{r}
-#| label: scholar-table-last
-#| message: false
-#| output: asis
-# knitr::kable(last[, c(1, 2, 3)])
-for (i in seq_len(nrow(last))) {
-    cat('- "', last$title[i], '". ', last$author[i], ". *", last$journal[i], "* [(link)](", last$url[i], ")", "\n", sep = "")
-}
-```
-
-My three most cited publications (`r Sys.Date()`):  
-```{r}
-#| label: scholar-table-most
-#| message: false
-#| output: asis
-# knitr::kable(last[, c(1, 2, 3)])
-for (i in seq_len(nrow(most))) {
-    cat('- "', most$title[i], '". ', most$author[i], ". *", most$journal[i], "* [(link)](", most$url[i], ") **Citations: ", most$cites[i], "**", "\n", sep = "")
-}
-```
-
-
-
-See [google scholar](https://scholar.google.de/citations?user=MFlgHdcAAAAJ) for a full list.
-
 
 
 # /dev/
@@ -114,7 +81,7 @@ I mainly develop packages for [R](https://www.r-project.org/) and extensions for
 ido <- order(pkgs$Package)
 fl <- list.files("img/hex", full.names = TRUE)
 for (i in seq_along(fl)) {
-    cat("![](", fl[i], ")[", pkgs$Package[ido[i]], "](", pkgs$RemoteUrl[ido[i]], ")", "\n", sep = "")
+  cat("![](", fl[i], ")[", pkgs$Package[ido[i]], "](", pkgs$RemoteUrl[ido[i]], ")", "\n", sep = "")
 }
 
 
@@ -128,10 +95,10 @@ for (i in seq_along(fl)) {
 doc <- read_html("https://raw.githubusercontent.com/schochastics/schochastics/main/README.md")
 descr <- html_table(doc)[[1]]$X1[-1]
 links <- html_nodes(doc, xpath = "//td/a") %>%
-    html_attr("href")
+  html_attr("href")
 
 for (i in seq_along(descr)) {
-    cat("[", descr[i], "](", links[i], ") &#9679; ", sep = "")
+  cat("[", descr[i], "](", links[i], ") &#9679; ", sep = "")
 }
 ```
 
@@ -146,6 +113,37 @@ I have created a series of tutorials for network analysis:
 - [Tidy Network Analysis in R](https://schochastics.github.io/tidynetAnaR/)
 
 I am also an author of the book [R4SNA](https://schochastics.github.io/R4SNA/)
+
+# /sci/ ![](https://img.shields.io/badge/lifecycle-deprecated-9EEBCF)
+
+I publish in the fields:  
+`r paste0(l$fields,collapse="; ")`
+
+My last five publications:
+```{r}
+#| label: scholar-table-last
+#| message: false
+#| output: asis
+# knitr::kable(last[, c(1, 2, 3)])
+for (i in seq_len(nrow(last))) {
+  cat('- "', last$title[i], '". ', last$author[i], ". *", last$journal[i], "* [(link)](", last$url[i], ")", "\n", sep = "")
+}
+```
+
+My three most cited publications (`r Sys.Date()`):  
+```{r}
+#| label: scholar-table-most
+#| message: false
+#| output: asis
+# knitr::kable(last[, c(1, 2, 3)])
+for (i in seq_len(nrow(most))) {
+  cat('- "', most$title[i], '". ', most$author[i], ". *", most$journal[i], "* [(link)](", most$url[i], ") **Citations: ", most$cites[i], "**", "\n", sep = "")
+}
+```
+
+
+
+See [google scholar](https://scholar.google.de/citations?user=MFlgHdcAAAAJ) for a full list.
 
 
 
