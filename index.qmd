@@ -59,8 +59,8 @@ most$url <- sapply(most$pubid, \(x) get_publication_url(id, x))
 ![](avatar.jpg){.avatar}
 
 👋 Hi I am [David Schoch]{.highlight}  
-I am the team lead for "Transparent Social Analytics" in the Department for Computational Social Science at [GESIS](https://www.gesis.org/home).
-
+I am Data Scientist/DevOps Engineer at [cynkra](https://www.cynkra.com/).
+ 
 <!-- https://github.com/edent/SuperTinyIcons?tab=readme-ov-file -->
 [![](img/github.svg){.social}](https://github.com/schochastics)
 [![](img/mastodon.svg){.social}](https://fosstodon.org/@schochastics)
@@ -116,7 +116,7 @@ I am also an author of the book [R4SNA](https://schochastics.github.io/R4SNA/)
 
 # /sci/ ![](https://img.shields.io/badge/lifecycle-deprecated-9EEBCF)
 
-I publish in the fields:  
+As an academic (till end 2024) I published in the fields:  
 `r paste0(l$fields,collapse="; ")`
 
 My last five publications:
