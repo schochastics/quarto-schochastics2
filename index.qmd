@@ -31,10 +31,13 @@ library(rvest)
 pkgs <- jsonlite::fromJSON("https://schochastics.r-universe.dev/api/packages/")
 pkgs <- select(pkgs, Package, RemoteUrl)
 if (!"adaR" %in% pkgs$Package) {
-  pkgs <- bind_rows(pkgs, tibble(
-    Package = c("adaR", "rtoot"),
-    RemoteUrl = paste0("https://github.com/gesistsa/", Package)
-  ))
+  pkgs <- bind_rows(
+    pkgs,
+    tibble(
+      Package = c("adaR", "rtoot"),
+      RemoteUrl = paste0("https://github.com/gesistsa/", Package)
+    )
+  )
 }
 
 id <- "MFlgHdcAAAAJ"
@@ -59,7 +62,7 @@ most$url <- sapply(most$pubid, \(x) get_publication_url(id, x))
 ![](avatar.jpg){.avatar}
 
 👋 Hi I am [David Schoch]{.highlight}  
-I am Data Scientist/DevOps Engineer at [cynkra](https://www.cynkra.com/).
+I am a Data Scientist/DevOps Engineer at [cynkra](https://www.cynkra.com/).
  
 <!-- https://github.com/edent/SuperTinyIcons?tab=readme-ov-file -->
 [![](img/github.svg){.social}](https://github.com/schochastics)
@@ -81,9 +84,18 @@ I mainly develop packages for [R](https://www.r-project.org/) and extensions for
 ido <- order(pkgs$Package)
 fl <- list.files("img/hex", full.names = TRUE)
 for (i in seq_along(fl)) {
-  cat("![](", fl[i], ")[", pkgs$Package[ido[i]], "](", pkgs$RemoteUrl[ido[i]], ")", "\n", sep = "")
+  cat(
+    "![](",
+    fl[i],
+    ")[",
+    pkgs$Package[ido[i]],
+    "](",
+    pkgs$RemoteUrl[ido[i]],
+    ")",
+    "\n",
+    sep = ""
+  )
 }
-
 
 ```
 
@@ -92,7 +104,9 @@ for (i in seq_along(fl)) {
 ```{r}
 #| label: quarto
 #| output: asis
-doc <- read_html("https://raw.githubusercontent.com/schochastics/schochastics/main/README.md")
+doc <- read_html(
+  "https://raw.githubusercontent.com/schochastics/schochastics/main/README.md"
+)
 descr <- html_table(doc)[[1]]$X1[-1]
 links <- html_nodes(doc, xpath = "//td/a") %>%
   html_attr("href")
@@ -126,7 +140,19 @@ My last five publications:
 #| output: asis
 # knitr::kable(last[, c(1, 2, 3)])
 for (i in seq_len(nrow(last))) {
-  cat('- "', last$title[i], '". ', last$author[i], ". *", last$journal[i], "* [(link)](", last$url[i], ")", "\n", sep = "")
+  cat(
+    '- "',
+    last$title[i],
+    '". ',
+    last$author[i],
+    ". *",
+    last$journal[i],
+    "* [(link)](",
+    last$url[i],
+    ")",
+    "\n",
+    sep = ""
+  )
 }
 ```
 
@@ -137,7 +163,21 @@ My three most cited publications (`r Sys.Date()`):
 #| output: asis
 # knitr::kable(last[, c(1, 2, 3)])
 for (i in seq_len(nrow(most))) {
-  cat('- "', most$title[i], '". ', most$author[i], ". *", most$journal[i], "* [(link)](", most$url[i], ") **Citations: ", most$cites[i], "**", "\n", sep = "")
+  cat(
+    '- "',
+    most$title[i],
+    '". ',
+    most$author[i],
+    ". *",
+    most$journal[i],
+    "* [(link)](",
+    most$url[i],
+    ") **Citations: ",
+    most$cites[i],
+    "**",
+    "\n",
+    sep = ""
+  )
 }
 ```
 
