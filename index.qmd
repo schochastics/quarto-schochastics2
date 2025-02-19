@@ -40,6 +40,16 @@ if (!"adaR" %in% pkgs$Package) {
   )
 }
 
+if (!"rchroma" %in% pkgs$Package) {
+  pkgs <- bind_rows(
+    pkgs,
+    tibble(
+      Package = c("rchroma"),
+      RemoteUrl = paste0("https://github.com/cynkra/", Package)
+    )
+  )
+}
+
 id <- "MFlgHdcAAAAJ"
 l <- get_profile(id)
 d <- get_publications(id)
